@@ -13,11 +13,13 @@ class Todo implements TodoInterface
         this.myTasks.push(task);
         console.log(task+" has been added to my task");
         return this.myTasks.length;
+        //adds tasks to the aray and lets the user now
     }
     listAllTasks():void
     {
         this.myTasks.forEach((ele)=>{
         })
+        //currently empty
     }
 
     deleteTask(task:string):number
@@ -27,6 +29,7 @@ class Todo implements TodoInterface
         {
             this.myTasks.splice(index,1)
             console.log("Item: "+task+"has been removed from my Tasks list.");
+            //like in exercise 1 if the index is greater than -1 it deletes the index at 1
         }
         else
         {
@@ -40,4 +43,6 @@ class Todo implements TodoInterface
 let myTodos = new Todo();
 myTodos.addTask("Work!");
 myTodos.listAllTasks();
-myTodos.addTask("Eat");
+//doesnt do anything yet until listAllTasks has members
+myTodos.deleteTask("Eat");
+//delets task from the array but it wont because "Eat" does not exisy in the array
